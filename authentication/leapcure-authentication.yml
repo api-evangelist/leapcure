@@ -1,0 +1,14 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/leapcure-blog-content-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: applicationPassword
+  type: http
+  scheme: basic
+  description: WordPress application passwords. Authorize at https://blog.leapcure.com/wp-admin/authorize-application.php
+    (advertised in the /wp-json/ discovery document).
+  sources:
+  - openapi/leapcure-blog-content-openapi.yml

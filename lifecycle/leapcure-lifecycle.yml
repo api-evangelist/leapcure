@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/leapcure-blog-content-openapi.yml + live /wp-json/ discovery document
+scope: >-
+  Lifecycle facts for the one machine-readable surface Leapcure operates: the WordPress REST API
+  behind blog.leapcure.com. Leapcure's clinical-trial recruitment business publishes no product API,
+  so no product-API versioning, deprecation policy, SLA or status page is asserted here. Everything
+  below was confirmed against the live host on 2026-07-19/20; nothing was assumed from generic
+  WordPress documentation.
+versioning:
+  scheme: namespace-in-path
+  current: wp/v2
+  base: https://blog.leapcure.com/wp-json
+  discovery: https://blog.leapcure.com/wp-json/
+  namespaces_advertised: 37
+  note: >-
+    WordPress versions its REST API by namespace segment (wp/v2). The discovery document advertises
+    37 namespaces (wp/v2, oembed/1.0, jetpack/v4, wpcom/v2, mcp, ...). No dated API version is exposed.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No provider deprecation policy is published and no RFC 8594 Sunset/Deprecation response headers
+    were observed. A handful of request-body fields on the media edit route are marked DEPRECATED in
+    their descriptions (rotation, x, y, width, height -> use `modifiers`) but this is field-level
+    guidance from WordPress core, not an API deprecation policy.
+sla:
+  url: null
+  uptime_target: null
+  note: No SLA is published for this blog host.
+status_page: null
+status_page_note: >-
+  Leapcure publishes no status page for the blog API. The site is WordPress.com-hosted (Jetpack /
+  wpcomsh), whose platform status lives at status.wordpress.com, but that is not a Leapcure-owned
+  status surface and is not asserted as one.
+deprecated_operations: []
+related:
+- openapi/leapcure-blog-content-openapi.yml
+- conventions/leapcure-conventions.yml

@@ -1,0 +1,15 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/leapcure-blog-content-openapi.yml
+note: >-
+  Packaged Agent Skills for the Leapcure WordPress REST API. Every step is grounded in an
+  operationId that exists verbatim in the OpenAPI; none were invented.
+skills:
+- file: leapcure-browse-blog-content.md
+  name: Browse Leapcure blog content
+  api: openapi/leapcure-blog-content-openapi.yml
+  operations: [listWpV2Posts, getWpV2PostsById, listWpV2Categories, listWpV2Tags, listWpV2Comments]
+- file: leapcure-search-content.md
+  name: Search across the Leapcure blog
+  api: openapi/leapcure-blog-content-openapi.yml
+  operations: [listWpV2Search, getWpV2PostsById, getWpV2PagesById]

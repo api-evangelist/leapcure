@@ -1,0 +1,102 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/leapcure-blog-content-openapi.yml
+scope: >-
+  Entity-relationship graph derived from the WordPress REST API (wp/v2) route metadata and the
+  id-reference fields observed on each resource's request/response bodies. Relationships were read
+  from foreign-key-style fields (author, post, parent, featured_media) and the collection filter
+  parameters that accept those ids; no relationships were invented.
+entities:
+- name: post
+  collection: /wp/v2/posts
+  operations: [listWpV2Posts, getWpV2PostsById, createWpV2Posts, replaceWpV2PostsById, updateWpV2PostsById, deleteWpV2PostsById]
+- name: page
+  collection: /wp/v2/pages
+  operations: [listWpV2Pages, getWpV2PagesById, createWpV2Pages, replaceWpV2PagesById, updateWpV2PagesById, deleteWpV2PagesById]
+- name: comment
+  collection: /wp/v2/comments
+  operations: [listWpV2Comments, getWpV2CommentsById, createWpV2Comments, deleteWpV2CommentsById]
+- name: category
+  collection: /wp/v2/categories
+  operations: [listWpV2Categories, getWpV2CategoriesById, createWpV2Categories]
+- name: tag
+  collection: /wp/v2/tags
+  operations: [listWpV2Tags, getWpV2TagsById, createWpV2Tags]
+- name: media
+  collection: /wp/v2/media
+  operations: [listWpV2Media, getWpV2MediaById, createWpV2Media]
+- name: user
+  collection: /wp/v2/users
+  operations: [listWpV2Users, getWpV2UsersById]
+- name: taxonomy
+  collection: /wp/v2/taxonomies
+  operations: [listWpV2Taxonomies, getWpV2TaxonomiesByTaxonomy]
+- name: type
+  collection: /wp/v2/types
+  operations: [listWpV2Types, getWpV2TypesByType]
+- name: status
+  collection: /wp/v2/statuses
+  operations: [listWpV2Statuses, getWpV2StatusesByStatus]
+relationships:
+- from: post
+  to: user
+  kind: belongs_to
+  via: author
+- from: post
+  to: media
+  kind: has_one
+  via: featured_media
+- from: post
+  to: category
+  kind: has_many
+  via: categories
+- from: post
+  to: tag
+  kind: has_many
+  via: tags
+- from: post
+  to: comment
+  kind: has_many
+  via: post
+- from: comment
+  to: post
+  kind: belongs_to
+  via: post
+- from: comment
+  to: user
+  kind: belongs_to
+  via: author
+- from: comment
+  to: comment
+  kind: belongs_to
+  via: parent
+- from: page
+  to: user
+  kind: belongs_to
+  via: author
+- from: page
+  to: page
+  kind: belongs_to
+  via: parent
+- from: page
+  to: media
+  kind: has_one
+  via: featured_media
+- from: media
+  to: post
+  kind: belongs_to
+  via: post
+- from: media
+  to: user
+  kind: belongs_to
+  via: author
+- from: category
+  to: category
+  kind: belongs_to
+  via: parent
+id_scheme:
+  type: integer
+  note: WordPress resource ids are auto-increment integers; there is no string id-prefix scheme.
+related:
+- openapi/leapcure-blog-content-openapi.yml
+- conventions/leapcure-conventions.yml

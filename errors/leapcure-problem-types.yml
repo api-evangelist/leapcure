@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/leapcure-blog-content-openapi.yml
+format: wordpress-rest-error
+rfc9457: false
+envelope:
+  media_type: application/json
+  note: >-
+    The WordPress REST API does not use RFC 9457 application/problem+json. Errors are returned as a
+    flat JSON object with a machine-readable `code`, a human-readable `message`, and a `data` object
+    that repeats the HTTP `status`. Codes are WordPress-namespaced (e.g. rest_forbidden,
+    rest_no_route, rest_post_invalid_id). Derived from the Error schema and 4xx responses declared on
+    every operation in the OpenAPI; no error codes were invented.
+  shape:
+    code: string  # machine-readable error code, e.g. rest_forbidden
+    message: string  # human-readable error message
+    data:
+      status: integer  # repeated HTTP status code
+problems:
+- status: 400
+  code: rest_invalid_param
+  title: Invalid request
+  meaning: One or more request parameters failed validation (wrong type, out-of-range, or unknown value).
+  remediation: Check the parameter names, types and enum values declared for the operation in the OpenAPI.
+  applies_to: all operations
+- status: 401
+  code: rest_forbidden
+  title: Authentication required
+  meaning: >-
+    The request was not authenticated (or credentials were rejected) for an operation or context
+    that requires it. Write operations and the `edit` context require WordPress application passwords.
+  remediation: >-
+    Send HTTP Basic credentials from an application password issued at
+    https://blog.leapcure.com/wp-admin/authorize-application.php
+  applies_to: write operations; edit context; settings/me routes
+- status: 403
+  code: rest_forbidden
+  title: Forbidden
+  meaning: The authenticated user lacks the capability required for this operation.
+  remediation: Use an account whose WordPress role grants the required capability.
+  applies_to: privileged read/write operations
+- status: 404
+  code: rest_no_route / rest_post_invalid_id
+  title: Not found
+  meaning: The route does not exist, or the addressed resource id could not be found.
+  remediation: Verify the path and the resource id; list the collection first to obtain valid ids.
+  applies_to: '{id} operations'
+related:
+- openapi/leapcure-blog-content-openapi.yml
+- conventions/leapcure-conventions.yml

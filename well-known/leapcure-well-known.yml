@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: probed
+source: live GET probes on 2026-07-20
+note: >-
+  No /.well-known discovery documents are served on either host — every probed path returned 404
+  (the response bodies are the sites' HTML 404 pages, not machine-readable documents). Recorded for
+  auditability; no WellKnown/SecurityTxt pointer is emitted because nothing was found. The WordPress
+  REST API instead advertises its own discovery at https://blog.leapcure.com/wp-json/ (Link:
+  rel="https://api.w.org/") rather than via /.well-known.
+hosts:
+- host: https://leapcure.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://blog.leapcure.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+alternate_discovery:
+  wp_rest_discovery: https://blog.leapcure.com/wp-json/
+  status: 200

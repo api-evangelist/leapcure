@@ -1,0 +1,27 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Leapcure Blog Content API
+  version: 1.0.0
+extends: openapi/leapcure-blog-content-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-enrichment:
+      generated: '2026-07-20'
+      method: generated
+      source: openapi/leapcure-blog-content-openapi.yml
+      note: >-
+        Non-destructive overlay capturing API Evangelist's enrichment metadata for the Leapcure
+        WordPress REST API. The original OpenAPI is never mutated; the scorer reads the original spec.
+    x-apievangelist-conventions: conventions/leapcure-conventions.yml
+    x-apievangelist-errors: errors/leapcure-problem-types.yml
+    x-apievangelist-data-model: data-model/leapcure-data-model.yml
+    x-apievangelist-authentication: authentication/leapcure-authentication.yml
+- target: $.info
+  update:
+    x-api-classification:
+      surface: blog-content
+      platform: WordPress REST API
+      hosting: WordPress.com (Jetpack / wpcomsh)
+      anonymous_read: true
+      writes_require_auth: true

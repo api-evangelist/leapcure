@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/leapcure-blog-content-openapi.yml + conventions/leapcure-conventions.yml
+scope: >-
+  Cross-cutting standards conformance for the WordPress REST API (wp/v2) behind blog.leapcure.com.
+  Each entry is derived from observed spec/route metadata; absence of a standard is recorded honestly,
+  not penalized. No compliance program is published, so no `Compliance` pointer is emitted.
+standards:
+- id: oauth2
+  conforms: false
+  evidence: No oauth2 securityScheme; the only scheme is HTTP Basic (WordPress application passwords).
+- id: oidc
+  conforms: false
+  evidence: No openIdConnect scheme; /.well-known/openid-configuration returned 404.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use the flat WordPress error envelope (code/message/data.status), not application/problem+json.
+- id: rfc8288-web-linking
+  conforms: true
+  evidence: Collection responses carry an RFC 8288 Link header with rel="next"/"prev"; responses include a _links object.
+- id: pagination
+  conforms: true
+  evidence: Page-number pagination (page/per_page) with X-WP-Total and X-WP-TotalPages response headers.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency-key header or parameter is exposed by any route.
+- id: json
+  conforms: true
+  evidence: All operations negotiate application/json for request and response.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 404 on both leapcure.com and blog.leapcure.com.
+related:
+- openapi/leapcure-blog-content-openapi.yml
+- conventions/leapcure-conventions.yml

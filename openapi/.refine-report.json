@@ -1,0 +1,34 @@
+{
+  "provider": "leapcure",
+  "sources": [
+    "leapcure-categories-api-openapi.yml",
+    "leapcure-comments-api-openapi.yml",
+    "leapcure-media-api-openapi.yml",
+    "leapcure-pages-api-openapi.yml",
+    "leapcure-posts-api-openapi.yml",
+    "leapcure-search-api-openapi.yml",
+    "leapcure-statuses-api-openapi.yml",
+    "leapcure-tags-api-openapi.yml",
+    "leapcure-taxonomies-api-openapi.yml",
+    "leapcure-types-api-openapi.yml",
+    "leapcure-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "leapcure-categories-api-openapi.yml",
+    "leapcure-comments-api-openapi.yml",
+    "leapcure-media-api-openapi.yml",
+    "leapcure-pages-api-openapi.yml",
+    "leapcure-posts-api-openapi.yml",
+    "leapcure-search-api-openapi.yml",
+    "leapcure-statuses-api-openapi.yml",
+    "leapcure-tags-api-openapi.yml",
+    "leapcure-taxonomies-api-openapi.yml",
+    "leapcure-types-api-openapi.yml",
+    "leapcure-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
