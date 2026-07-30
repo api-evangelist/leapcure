@@ -1,7 +1,27 @@
 aid: leapcure
 name: Leapcure
-description: Leapcure is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Leapcure is a clinical-trial patient recruitment company whose mission is "where patient advocacy
+  meets research" — connecting patients with clinical studies and helping research sites and sponsors
+  reach and enroll participants. Leapcure was surfaced as a portfolio company of 500 Global and added
+  to the API Evangelist network. The company publishes no product API of its own; the single
+  machine-readable surface it operates is the WordPress REST API (wp/v2) behind its blog at
+  blog.leapcure.com, which exposes read access to posts, pages, categories, tags, users, media,
+  comments and search, plus authenticated write operations via WordPress application passwords. This
+  profile was enriched by the API Evangelist pipeline from that live surface.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://blog.leapcure.com/wp-content/uploads/2022/10/cropped-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/leapcure/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,15 +31,208 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Clinical Trials
+- Patient Recruitment
+- Healthcare
+- Blog
+- Content API
+- WordPress
+apis:
+- aid: leapcure:leapcure-categories-api
+  name: Leapcure categories API
+  description: The categories API from Leapcure — 2 operation(s) for categories.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - categories
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-categories-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-comments-api
+  name: Leapcure comments API
+  description: The comments API from Leapcure — 2 operation(s) for comments.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - comments
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-comments-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-media-api
+  name: Leapcure media API
+  description: The media API from Leapcure — 6 operation(s) for media.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - media
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-media-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-pages-api
+  name: Leapcure pages API
+  description: The pages API from Leapcure — 6 operation(s) for pages.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - pages
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-pages-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-posts-api
+  name: Leapcure posts API
+  description: The posts API from Leapcure — 6 operation(s) for posts.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - posts
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-posts-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-search-api
+  name: Leapcure search API
+  description: The search API from Leapcure — 1 operation(s) for search.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - search
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-search-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-statuses-api
+  name: Leapcure statuses API
+  description: The statuses API from Leapcure — 2 operation(s) for statuses.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - statuses
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-statuses-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-tags-api
+  name: Leapcure tags API
+  description: The tags API from Leapcure — 2 operation(s) for tags.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - tags
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-tags-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-taxonomies-api
+  name: Leapcure taxonomies API
+  description: The taxonomies API from Leapcure — 2 operation(s) for taxonomies.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - taxonomies
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-taxonomies-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-types-api
+  name: Leapcure types API
+  description: The types API from Leapcure — 2 operation(s) for types.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - types
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-types-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
+- aid: leapcure:leapcure-users-api
+  name: Leapcure users API
+  description: The users API from Leapcure — 6 operation(s) for users.
+  humanURL: https://blog.leapcure.com/wp-json/
+  baseURL: https://blog.leapcure.com/wp-json
+  tags:
+  - users
+  properties:
+  - type: OpenAPI
+    url: openapi/leapcure-users-api-openapi.yml
+  - type: Documentation
+    url: https://blog.leapcure.com/wp-json/
+  - type: APIReference
+    url: https://developer.wordpress.org/rest-api/reference/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Authentication
+  url: authentication/leapcure-authentication.yml
+- type: Conventions
+  url: conventions/leapcure-conventions.yml
+- type: ErrorCatalog
+  url: errors/leapcure-problem-types.yml
+- type: DataModel
+  url: data-model/leapcure-data-model.yml
+- type: Lifecycle
+  url: lifecycle/leapcure-lifecycle.yml
+- type: Conformance
+  url: conformance/leapcure-conformance.yml
+- type: MCPServer
+  url: mcp/leapcure-mcp.yml
+- type: AgentSkill
+  url: skills/leapcure-browse-blog-content.md
+- type: AgentSkill
+  url: skills/leapcure-search-content.md
+- type: LLMsTxt
+  url: llms/leapcure-llms.txt
+- type: DomainSecurity
+  url: security/leapcure-domain-security.yml
 - type: Website
   url: https://leapcure.com
+- type: Blog
+  url: https://blog.leapcure.com
+- type: PrivacyPolicy
+  url: https://leapcure.com/privacy-policy
+- type: TermsOfService
+  url: https://leapcure.com/terms-of-service
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
