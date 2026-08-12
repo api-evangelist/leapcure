@@ -201,6 +201,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Overlay
+  url: overlays/leapcure-blog-content-overlay.yaml
 - type: Authentication
   url: authentication/leapcure-authentication.yml
 - type: Conventions
