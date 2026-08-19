@@ -2,14 +2,12 @@ generated: '2026-07-19'
 method: searched
 source: https://blog.leapcure.com/wp-json/mcp
 status: published
-notes: >-
-  Leapcure's blog platform (blog.leapcure.com, WordPress) exposes a live Model Context Protocol
-  endpoint through the WordPress MCP Adapter. The `mcp` namespace is advertised in the site's own
-  REST discovery document at https://blog.leapcure.com/wp-json/ and the server route was confirmed
-  reachable on 2026-07-19. An unauthenticated JSON-RPC `initialize` call returns HTTP 401
-  (`rest_forbidden`), so the tool list could not be enumerated anonymously and is deliberately left
-  empty rather than guessed. This is infrastructure Leapcure's platform ships, not a product MCP
-  server Leapcure documents for third parties.
+notes: Leapcure's blog platform (blog.leapcure.com, WordPress) exposes a live Model Context Protocol endpoint
+  through the WordPress MCP Adapter. The `mcp` namespace is advertised in the site's own REST discovery
+  document at https://blog.leapcure.com/wp-json/ and the server route was confirmed reachable on 2026-07-19.
+  An unauthenticated JSON-RPC `initialize` call returns HTTP 401 (`rest_forbidden`), so the tool list
+  could not be enumerated anonymously and is deliberately left empty rather than guessed. This is infrastructure
+  Leapcure's platform ships, not a product MCP server Leapcure documents for third parties.
 server:
   name: leapcure-blog
   transport: http
@@ -25,9 +23,7 @@ authentication:
     request: JSON-RPC initialize (protocolVersion 2025-06-18)
     status: 401
     code: rest_forbidden
-  scheme: >-
-    WordPress application passwords (HTTP basic), authorized at
-    https://blog.leapcure.com/wp-admin/authorize-application.php
+  scheme: WordPress application passwords (HTTP basic), authorized at https://blog.leapcure.com/wp-admin/authorize-application.php
 discovery:
 - path: /wp-json/
   status: 200
@@ -36,8 +32,14 @@ discovery:
   status: 200
   evidence: routes /mcp and /mcp/mcp-adapter-default-server
 tools: []
-tools_note: >-
-  Not enumerable without credentials; no tool list is asserted. Re-run this probe with a token to
-  populate tools[] from the server's own tools/list response.
+tools_note: Not enumerable without credentials; no tool list is asserted. Re-run this probe with a token
+  to populate tools[] from the server's own tools/list response.
 related:
 - openapi/leapcure-blog-content-openapi.yml
+deployment:
+  mode: remote
+  endpoint: https://blog.leapcure.com/wp-json/mcp/mcp-adapter-default-server
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
