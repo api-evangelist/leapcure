@@ -1,17 +1,7 @@
 {
   "provider": "leapcure",
   "sources": [
-    "leapcure-categories-api-openapi.yml",
-    "leapcure-comments-api-openapi.yml",
-    "leapcure-media-api-openapi.yml",
-    "leapcure-pages-api-openapi.yml",
-    "leapcure-posts-api-openapi.yml",
-    "leapcure-search-api-openapi.yml",
-    "leapcure-statuses-api-openapi.yml",
-    "leapcure-tags-api-openapi.yml",
-    "leapcure-taxonomies-api-openapi.yml",
-    "leapcure-types-api-openapi.yml",
-    "leapcure-users-api-openapi.yml"
+    "_original/leapcure-blog-content-openapi.yml"
   ],
   "outputs": [
     "leapcure-categories-api-openapi.yml",
@@ -29,6 +19,22 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "leapcure-blog-content-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "leapcure-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-comments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-media-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-pages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-posts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-statuses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-taxonomies-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-types-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "leapcure-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
