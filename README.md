@@ -64,6 +64,117 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Leapcure is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Leapcure is a clinical-trial patient recruitment company whose mission is "where patient advocacy meets research" — connecting patients with clinical studies and helping research sites and sponsors reach and enroll participants. Leapcure was surfaced as a portfolio company of 500 Global and added to the API Evangelist network. The company publishes no product API of its own; the single machine-readable surface it operates is the WordPress REST API (wp/v2) behind its blog at blog.leapcure.com, which exposes read access to posts, pages, categories, tags, users, media, comments and search, plus authenticated write operations via WordPress application passwords. This profile was enriched by the API Evangelist pipeline from that live surface.
 
-Backed by: 500-global — https://leapcure.com
+**Areas:** Company · Clinical Trials · Patient Recruitment · Healthcare · Blog · content-api · WordPress
+
+## Leapcure on APIs.io
+
+Everything profiled for Leapcure is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/leapcure/](https://apis.io/providers/leapcure/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Leapcure Website (WordPress REST)](https://apis.io/apis/leapcure/blog-leapcure-com-website-wordpress-rest/) — The public WordPress REST API (wp-json) of the Leapcure website at blog.leapcure.com: the route index of the site's content management system, catalogued as…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [leapcure-blog](https://apis.io/servers/leapcure/leapcure-blog/)
+
+#### Collections (11)
+
+Postman and Open Collection request collections.
+
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-categories-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-comments-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-media-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-pages-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-posts-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-search-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-statuses-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-tags-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-taxonomies-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-types-api/)
+- [Moved to /providers/leapcure/](https://apis.io/collections/leapcure/open-leapcure-users-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Leapcure Blog Content Overlay](https://apis.io/overlays/leapcure/leapcure-blog-content-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Leapcure Authentication](https://apis.io/security/leapcure/leapcure-authentication/)
+- [Leapcure Domain Security](https://apis.io/security/leapcure/leapcure-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://leapcure.com)
+- [Blog](https://blog.leapcure.com)
+- [Terms of service](https://leapcure.com/terms-of-service)
+- [Privacy policy](https://leapcure.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 17.0** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 25.6 |
+| Access clarity | 21.1 |
+
+**Agent readiness 18.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 19.5** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/leapcure/](https://apis.io/providers/leapcure/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Leapcure: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/leapcure/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
